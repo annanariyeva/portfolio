@@ -2038,8 +2038,6 @@ footer {
 }
 
 .hero-image {
-    position: relative;
-
     width: 100%;
     height: 650px;
 
@@ -2059,49 +2057,44 @@ footer {
 }
 
 
-/* Georgia Tech card */
+/* Georgia Tech overlay card */
 
-.hero-tag {
+.hero-info-card {
     position: absolute;
 
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
 
-    z-index: 10;
+    z-index: 20;
 
-    padding: 22px 24px;
+    padding: 24px 26px;
 
-    background: rgba(246, 246, 243, 0.94);
-
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(246, 246, 243, 0.96);
 
     border-radius: var(--radius-medium);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
 }
 
-.hero-tag p {
-    margin: 0 0 8px;
-
-    color: var(--muted);
-
-    font-size: 0.75rem;
-}
-
-.hero-tag strong {
-    display: block;
-
-    margin: 0 0 5px;
-
-    color: var(--text);
-
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.hero-tag span {
-    display: block;
-
+.hero-info-card span {
     color: var(--muted);
 
     font-size: 0.8rem;
+}
+
+.hero-info-card strong {
+    color: var(--text);
+
+    font-size: 1rem;
+    font-weight: 650;
+}
+
+.hero-info-card .hero-info-school {
+    margin-bottom: 3px;
+
+    font-size: 0.75rem;
 }
