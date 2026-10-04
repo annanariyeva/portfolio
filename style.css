@@ -2052,7 +2052,7 @@ footer {
 }
 
 .hero-image {
-    height: 600px;
+    height: 550px;
     overflow: hidden;
     border-radius: var(--radius-large);
 }
