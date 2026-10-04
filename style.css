@@ -1967,3 +1967,35 @@ footer {
     }
 
 }
+
+/* ========================================
+   YOUTUBE VIDEO EMBEDS
+======================================== */
+
+.video-embed {
+    width: 100%;
+    height: 520px;
+
+    overflow: hidden;
+
+    background: var(--dark);
+
+    border-radius: var(--radius-medium);
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: 0;
+}
+
+@media (max-width: 600px) {
+
+    .video-embed {
+        height: 400px;
+    }
+
+}
