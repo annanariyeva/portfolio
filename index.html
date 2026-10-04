@@ -1,176 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Anna Nariyeva | Mechanical Engineering</title>
 
+    <meta
+        name="description"
+        content="Engineering portfolio of Anna Nariyeva, a Mechanical Engineering student at Georgia Tech concentrating in Manufacturing."
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav>
-        <div class="logo">AN</div>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <header class="site-header">
+        <nav class="navbar">
 
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+            <a href="index.html" class="logo">
+                AN
+            </a>
 
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="#work">Work</a>
+                <a href="#events">Events</a>
+                <a href="#about">About</a>
+            </div>
 
-    <header class="hero">
+            <a href="#" class="nav-button">
+                Resume ↗
+            </a>
 
-        <p class="intro">MECHANICAL ENGINEERING</p>
-
-        <h1>Anna Nariyeva</h1>
-
-        <h2>
-            Georgia Institute of Technology
-        </h2>
-
-        <p class="hero-description">
-            Mechanical engineering student interested in product development,
-            mechanical design, manufacturing, testing, and R&D.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#projects" class="primary-button">View My Work</a>
-            <a href="resume.pdf" class="secondary-button">Resume</a>
-        </div>
-
+        </nav>
     </header>
 
 
-    <section id="about">
+    <main>
 
-        <p class="section-label">ABOUT</p>
+        <!-- =========================
+             HERO
+        ========================== -->
+        <section class="hero">
 
-        <h2>Engineering through design, testing, and iteration.</h2>
+            <div class="hero-content">
 
-        <p>
-            I'm a third-year Mechanical Engineering student at Georgia Tech
-            with hands-on experience in CAD, FEA, prototyping, additive
-            manufacturing, mechanical testing, and engineering research.
-        </p>
-
-        <p>
-            Having lived and studied across multiple countries, I bring an
-            international perspective to engineering and enjoy collaborating
-            with people from different backgrounds.
-        </p>
-
-    </section>
-
-
-    <section id="projects">
-
-        <p class="section-label">SELECTED WORK</p>
-
-        <h2>Projects & Research</h2>
-
-
-        <a href="afo-project.html" class="project-card">
-
-    <div class="project-image">
-        <img src="afo-fea-displacement.png"
-             alt="Finite element analysis of a 3D-printed ankle-foot orthosis">
-    </div>
-
-    <div class="project-card-content">
-
-        <div>
-            <p class="project-number">01 / RESEARCH</p>
-
-            <h3>3D-Printed Ankle-Foot Orthoses</h3>
-
-            <p class="project-description">
-                Investigating how additive manufacturing, material properties,
-                and brace geometry affect the mechanical performance of
-                polypropylene ankle-foot orthoses.
-            </p>
-        </div>
-
-        <div class="project-bottom">
-            <p class="skills">
-                CAD · FEA · MECHANICAL TESTING · ADDITIVE MANUFACTURING
-            </p>
-
-            <span class="view-project">VIEW PROJECT →</span>
-        </div>
-
-    </div>
-
-</a>
-
-
-        <div class="project">
-
-            <div class="project-text">
-
-                <p class="project-number">03</p>
-
-                <h3>FEA & Experimental Validation</h3>
-
-                <p>
-                    Developed finite element models and calibrated material
-                    properties using experimental mechanical testing data to
-                    improve agreement between simulation and physical results.
+                <p class="eyebrow">
+                    MECHANICAL ENGINEERING · MANUFACTURING
                 </p>
 
-                <p class="skills">
-                    Fusion 360 · FEA · Data Analysis · Validation
+                <h1>
+                    Anna<br>
+                    Nariyeva
+                </h1>
+
+                <p class="hero-description">
+                    Mechanical Engineering student at Georgia Tech focused on
+                    manufacturing, design, and the development of physical systems.
+                    I enjoy taking ideas from concept through prototyping, testing,
+                    analysis, and validation.
                 </p>
+
+                <div class="hero-buttons">
+                    <a href="#work" class="button button-primary">
+                        View My Work
+                    </a>
+
+                    <a href="#about" class="button button-secondary">
+                        About Me
+                    </a>
+                </div>
 
             </div>
 
-        </div>
 
-    </section>
+            <!-- PHOTO / CAD PLACEHOLDER -->
+            <div class="hero-visual">
 
+                <div class="image-placeholder hero-image">
+                    <span>YOUR IMAGE / CAD RENDER</span>
+                </div>
 
-    <section id="experience">
+                <div class="hero-tag">
+                    <span>Georgia Tech</span>
+                    <strong>B.S. Mechanical Engineering</strong>
+                    <span>Manufacturing Concentration</span>
+                </div>
 
-        <p class="section-label">EXPERIENCE</p>
+            </div>
 
-        <h2>Research & Engineering</h2>
-
-        <p>
-            My experience spans mechanical research, laboratory work,
-            prototyping, engineering analysis, and collaboration with
-            academic, clinical, and international manufacturing partners.
-        </p>
-
-    </section>
-
-
-    <section id="contact">
-
-        <p class="section-label">CONTACT</p>
-
-        <h2>Let's connect.</h2>
-
-        <p>
-            I'm currently seeking Summer 2027 mechanical engineering
-            internship opportunities.
-        </p>
-
-        <a href="mailto:anariyeva3@gatech.edu">Email</a>
-
-        <a href="https://www.linkedin.com/in/anna-nariyeva/">LinkedIn</a>
-
-    </section>
+        </section>
 
 
+        <!-- =========================
+             ENGINEERING FOCUS
+        ========================== -->
+        <section class="focus-section">
+
+            <div class="section-heading">
+                <p class="section-number">01</p>
+
+                <div>
+                    <p class="eyebrow">ENGINEERING FOCUS</p>
+                    <h2>Design. Build. Test. Learn.</h2>
+                </div>
+            </div>
+
+
+            <div class="focus-grid">
+
+                <div class="focus-card">
+                    <span class="card-number">01</span>
+                    <h3>Design</h3>
+                    <p>
+                        CAD modeling, mechanical design, fixture development,
+                        and engineering problem solving.
+                    </p>
+                </div>
+
+                <div class="focus-card">
+                    <span class="card-number">02</span>
+                    <h3>Manufacturing</h3>
+                    <p>
+                        Additive manufacturing, prototyping, process development,
+                        and design for manufacturing.
+                    </p>
+                </div>
+
+                <div class="focus-card">
+                    <span class="card-number">03</span>
+                    <h3>Testing</h3>
+                    <p>
+                        Mechanical testing, experimental setup development,
+                        validation, and data collection.
+                    </p>
+                </div>
+
+                <div class="focus-card">
+                    <span class="card-number">04</span>
+                    <h3>Analysis</h3>
+                    <p>
+                        FEA, experimental comparison, engineering data analysis,
+                        and technical communication.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SELECTED WORK
+        ========================== -->
+        <section class="work-section" id="work">
+
+            <div class="section-heading">
+                <p class="section-number">02</p>
+
+                <div>
+                    <p class="eyebrow">SELECTED WORK</p>
+                    <h2>Engineering in practice.</h2>
+                </div>
+
+                <a href="#" class="section-link">
+                    View all work →
+                </a>
+            </div>
+
+
+            <!-- PROJECT 1 -->
+            <article class="project-card">
+
+                <div class="image-placeholder project-image">
+                    <span>AFO RESEARCH IMAGE</span>
+                </div>
+
+                <div class="project-info">
+
+                    <div class="project-meta">
+                        <span>RESEARCH</span>
+                        <span>2024 — 2026</span>
+                    </div>
+
+                    <h3>
+                        3D-Printed Ankle-Foot Orthosis Research
+                    </h3>
+
+                    <p>
+                        Investigating the mechanical performance of additively
+                        manufactured polypropylene ankle-foot orthoses through
+                        mechanical testing, finite element analysis, and
+                        experimental validation.
+                    </p>
+
+                    <div class="tags">
+                        <span>CAD</span>
+                        <span>FEA</span>
+                        <span>Mechanical Testing</span>
+                        <span>Additive Manufacturing</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        Explore project →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 2 -->
+            <article class="project-card project-reverse">
+
+                <div class="image-placeholder project-image">
+                    <span>DESIGN PROJECT IMAGE</span>
+                </div>
+
+                <div class="project-info">
+
+                    <div class="project-meta">
+                        <span>DESIGN</span>
+                        <span>GEORGIA TECH</span>
+                    </div>
+
+                    <h3>
+                        Mechanical Design & Prototyping
+                    </h3>
+
+                    <p>
+                        Selected design work exploring mechanical systems,
+                        product development, CAD, prototyping, and iterative
+                        engineering design.
+                    </p>
+
+                    <div class="tags">
+                        <span>Product Design</span>
+                        <span>CAD</span>
+                        <span>Prototyping</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        Explore project →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             EXPERIENCE
+        ========================== -->
+        <section class="experience-section">
+
+            <div class="section-heading">
+                <p class="section-number">03</p>
+
+                <div>
+                    <p class="eyebrow">EXPERIENCE</p>
+                    <h2>Research, engineering & leadership.</h2>
+                </div>
+            </div>
+
+
+            <div class="experience-list">
+
+                <div class="experience-row">
+                    <span class="experience-year">
+                        2024 — 2026
+                    </span>
+
+                    <div>
+                        <h3>Undergraduate Research Assistant</h3>
+                        <p>Penn State University · Engineering Research</p>
+                    </div>
+
+                    <span class="experience-arrow">↗</span>
+                </div>
+
+
+                <div class="experience-row">
+                    <span class="experience-year">
+                        2026 — Present
+                    </span>
+
+                    <div>
+                        <h3>B.S. Mechanical Engineering</h3>
+                        <p>
+                            Georgia Institute of Technology · Manufacturing
+                            Concentration
+                        </p>
+                    </div>
+
+                    <span class="experience-arrow">↗</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EVENTS PREVIEW
+        ========================== -->
+        <section class="events-section" id="events">
+
+            <div class="section-heading">
+                <p class="section-number">04</p>
+
+                <div>
+                    <p class="eyebrow">PRESENTATIONS</p>
+                    <h2>Research beyond the lab.</h2>
+                </div>
+
+                <a href="#" class="section-link">
+                    View events →
+                </a>
+            </div>
+
+
+            <div class="events-grid">
+
+                <article class="event-card">
+
+                    <div class="image-placeholder event-image">
+                        <span>REU PHOTO</span>
+                    </div>
+
+                    <p class="event-type">RESEARCH EXPERIENCE</p>
+
+                    <h3>REU Research Presentation</h3>
+
+                    <p>
+                        Undergraduate research presentation highlighting
+                        engineering research and experimental work.
+                    </p>
+
+                </article>
+
+
+                <article class="event-card">
+
+                    <div class="image-placeholder event-image">
+                        <span>ACURA PHOTO</span>
+                    </div>
+
+                    <p class="event-type">POSTER PRESENTATION</p>
+
+                    <h3>ACURA Poster Fair</h3>
+
+                    <p>
+                        Presented undergraduate research and engineering
+                        findings to the university community.
+                    </p>
+
+                </article>
+
+
+                <article class="event-card">
+
+                    <div class="image-placeholder event-image">
+                        <span>ASB PHOTO</span>
+                    </div>
+
+                    <p class="event-type">CONFERENCE</p>
+
+                    <h3>ASB East Regional Conference</h3>
+
+                    <p>
+                        Presented research on the mechanical evaluation and
+                        manufacturing of ankle-foot orthoses.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT PREVIEW
+        ========================== -->
+        <section class="about-preview" id="about">
+
+            <div class="about-text">
+
+                <p class="eyebrow">
+                    BEYOND ENGINEERING
+                </p>
+
+                <h2>
+                    Engineering shaped by an international perspective.
+                </h2>
+
+                <p>
+                    Growing up across multiple countries taught me to adapt,
+                    communicate across cultures, and become comfortable entering
+                    unfamiliar environments. Those experiences continue to shape
+                    how I approach engineering, collaboration, and learning.
+                </p>
+
+                <a href="#" class="button button-secondary">
+                    My Story →
+                </a>
+
+            </div>
+
+
+            <div class="image-placeholder about-image">
+                <span>PERSONAL / INTERNATIONAL PHOTO</span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+        <section class="contact-section">
+
+            <p class="eyebrow">
+                LET'S CONNECT
+            </p>
+
+            <h2>
+                Interested in working together?
+            </h2>
+
+            <p>
+                I'm currently exploring opportunities in manufacturing,
+                mechanical design, product development, and engineering research.
+            </p>
+
+            <div class="contact-buttons">
+
+                <a href="mailto:YOUR-EMAIL-HERE" class="button button-primary">
+                    Email Me
+                </a>
+
+                <a href="#" class="button button-secondary">
+                    LinkedIn ↗
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
     <footer>
+
         <p>© 2026 Anna Nariyeva</p>
+
+        <p>
+            Mechanical Engineering · Georgia Tech
+        </p>
+
     </footer>
 
 </body>
-
 </html>
