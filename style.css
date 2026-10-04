@@ -107,6 +107,7 @@ img {
 .nav-links a {
     color: var(--muted);
     font-size: 0.92rem;
+
     transition: 0.2s ease;
 }
 
@@ -140,6 +141,7 @@ img {
 main {
     max-width: var(--page-width);
     margin: auto;
+
     padding: 0 30px;
 }
 
@@ -154,7 +156,6 @@ section {
     font-weight: 700;
 
     letter-spacing: 0.16em;
-
     text-transform: uppercase;
 }
 
@@ -171,6 +172,7 @@ section {
 
 .section-number {
     color: var(--muted);
+
     font-size: 0.78rem;
 }
 
@@ -185,6 +187,7 @@ section {
 
 .section-link {
     color: var(--muted);
+
     font-size: 0.9rem;
 
     padding-bottom: 7px;
@@ -266,7 +269,7 @@ section {
 
 
 /* ========================================
-   HERO
+   HOMEPAGE HERO
 ======================================== */
 
 .hero {
@@ -302,45 +305,92 @@ section {
 
 .hero-buttons {
     display: flex;
+
     gap: 12px;
 
     margin-top: 38px;
 }
 
+
+/* ========================================
+   HOMEPAGE HERO PHOTO
+======================================== */
+
 .hero-visual {
     position: relative;
+
+    width: 100%;
 }
 
+.hero-image {
+    position: relative;
+
+    width: 100%;
+    height: 650px;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-large);
+
+    background: var(--surface);
 }
 
-.hero-tag {
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center top;
+}
+
+
+/* Georgia Tech information card */
+
+.hero-info-card {
     position: absolute;
 
-    bottom: 25px;
-    left: 25px;
-    right: 25px;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+
+    z-index: 10;
 
     display: flex;
     flex-direction: column;
 
-    padding: 20px 23px;
+    gap: 3px;
 
-    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 24px;
+
+    background: rgba(255, 255, 255, 0.92);
 
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
 }
 
-.hero-tag span {
+.hero-info-card span {
+    display: block;
+
     color: var(--muted);
+
     font-size: 0.76rem;
 }
 
-.hero-tag strong {
+.hero-info-card strong {
+    display: block;
+
     margin: 3px 0;
 
+    color: var(--text);
+
     font-size: 0.96rem;
+    font-weight: 650;
 }
 
 
@@ -382,12 +432,12 @@ section {
 .focus-card:hover {
     transform: translateY(-5px);
 
-    box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
 }
 
 .card-number {
     color: var(--muted);
+
     font-size: 0.72rem;
 }
 
@@ -400,6 +450,7 @@ section {
 
 .focus-card p {
     color: var(--muted);
+
     font-size: 0.9rem;
 }
 
@@ -524,9 +575,9 @@ section {
 }
 
 .experience-row h3 {
-    font-size: 1.2rem;
-
     margin-bottom: 4px;
+
+    font-size: 1.2rem;
 }
 
 .experience-row p {
@@ -541,7 +592,7 @@ section {
 
 
 /* ========================================
-   EVENTS
+   HOMEPAGE EVENTS
 ======================================== */
 
 .events-section {
@@ -557,13 +608,13 @@ section {
 }
 
 .event-card {
-    background: var(--surface);
-
-    border-radius: var(--radius-medium);
-
     padding: 12px 12px 25px;
 
+    background: var(--surface);
+
     border: 1px solid var(--line);
+
+    border-radius: var(--radius-medium);
 }
 
 .event-image {
@@ -591,9 +642,9 @@ section {
 }
 
 .event-card h3 {
-    font-size: 1.3rem;
-
     margin-bottom: 10px;
+
+    font-size: 1.3rem;
 }
 
 .event-card h3 + p {
@@ -629,11 +680,11 @@ section {
 }
 
 .about-text > p:not(.eyebrow) {
+    margin-bottom: 30px;
+
     color: var(--muted);
 
     line-height: 1.8;
-
-    margin-bottom: 30px;
 }
 
 .about-image {
@@ -653,7 +704,6 @@ section {
     text-align: center;
 
     background: var(--dark);
-
     color: white;
 
     border-radius: var(--radius-large);
@@ -664,9 +714,9 @@ section {
 }
 
 .contact-section h2 {
-    margin: 15px auto 20px;
-
     max-width: 700px;
+
+    margin: 15px auto 20px;
 
     font-size: clamp(2.5rem, 5vw, 4.8rem);
 
@@ -683,12 +733,12 @@ section {
 }
 
 .contact-buttons {
-    margin-top: 35px;
-
     display: flex;
     justify-content: center;
 
     gap: 10px;
+
+    margin-top: 35px;
 }
 
 .contact-section .button-secondary {
@@ -722,118 +772,6 @@ footer {
 
 
 /* ========================================
-   RESPONSIVE
-======================================== */
-
-@media (max-width: 900px) {
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-
-        padding-top: 80px;
-    }
-
-    .hero-image {
-        height: 500px;
-    }
-
-    .focus-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .project-card {
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-    }
-
-    .project-reverse .project-image,
-    .project-reverse .project-info {
-        order: initial;
-    }
-
-    .events-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-preview {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    main {
-        padding: 0 20px;
-    }
-
-    section {
-        padding: 75px 0;
-    }
-
-    .navbar {
-        padding: 0 20px;
-    }
-
-    .nav-button {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 4.2rem;
-    }
-
-    .hero-image {
-        height: 420px;
-    }
-
-    .focus-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-heading {
-        grid-template-columns: 35px 1fr;
-    }
-
-    .section-link {
-        display: none;
-    }
-
-    .project-image {
-        height: 340px;
-    }
-
-    .experience-row {
-        grid-template-columns: 1fr;
-    }
-
-    .experience-arrow {
-        display: none;
-    }
-
-    .contact-section {
-        padding: 70px 25px;
-    }
-
-    .contact-buttons,
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    footer {
-        flex-direction: column;
-
-        gap: 8px;
-    }
-
-}
-/* ========================================
    INNER PAGE HERO
 ======================================== */
 
@@ -848,6 +786,7 @@ footer {
     margin: 20px 0 35px;
 
     font-size: clamp(4rem, 8vw, 7.5rem);
+
     line-height: 0.92;
     letter-spacing: -0.07em;
 
@@ -874,6 +813,7 @@ footer {
 
 .case-study-header {
     display: grid;
+
     grid-template-columns: 1fr 300px;
 
     gap: 60px;
@@ -935,6 +875,7 @@ footer {
     background: var(--line);
 
     border: 1px solid var(--line);
+
     border-radius: var(--radius-medium);
 }
 
@@ -1095,6 +1036,7 @@ footer {
     background: var(--surface);
 
     border: 1px solid var(--line);
+
     border-radius: var(--radius-medium);
 }
 
@@ -1112,6 +1054,7 @@ footer {
     margin: 12px 0;
 
     font-size: 1.7rem;
+
     letter-spacing: -0.03em;
 }
 
@@ -1152,71 +1095,6 @@ footer {
 
 
 /* ========================================
-   WORK PAGE RESPONSIVE
-======================================== */
-
-@media (max-width: 900px) {
-
-    .case-study-header {
-        grid-template-columns: 1fr;
-    }
-
-    .case-study-summary {
-        padding-left: 0;
-
-        border-left: none;
-    }
-
-    .project-details {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .case-section {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-    }
-
-    .work-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .page-hero {
-        padding-top: 100px;
-    }
-
-    .page-hero h1 {
-        font-size: 3.7rem;
-    }
-
-    .case-hero-image {
-        height: 390px;
-    }
-
-    .project-details {
-        grid-template-columns: 1fr;
-    }
-
-    .case-image-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .case-image-grid .image-placeholder {
-        height: 300px;
-    }
-
-    .wide-case-image {
-        height: 320px;
-    }
-
-}
-
-/* ========================================
    EVENTS PAGE
 ======================================== */
 
@@ -1235,11 +1113,11 @@ footer {
 }
 
 .event-number {
+    padding-top: 7px;
+
     color: var(--muted);
 
     font-size: 0.78rem;
-
-    padding-top: 7px;
 }
 
 .event-feature-heading h2 {
@@ -1300,7 +1178,6 @@ footer {
 
 .event-buttons {
     display: flex;
-
     flex-wrap: wrap;
 
     gap: 10px;
@@ -1324,13 +1201,15 @@ footer {
 
     align-items: start;
 }
+
 .poster-placeholder {
     width: 100%;
+
     aspect-ratio: 5 / 4;
 
-    border-radius: var(--radius-medium);
-
     overflow: hidden;
+
+    border-radius: var(--radius-medium);
 }
 
 .poster-link {
@@ -1338,9 +1217,9 @@ footer {
 
     width: 100%;
 
-    border-radius: var(--radius-medium);
-
     overflow: hidden;
+
+    border-radius: var(--radius-medium);
 
     cursor: zoom-in;
 }
@@ -1349,6 +1228,7 @@ footer {
     display: block;
 
     width: 100%;
+
     aspect-ratio: 5 / 4;
 
     object-fit: cover;
@@ -1385,7 +1265,6 @@ footer {
     height: 520px;
 
     display: flex;
-
     flex-direction: column;
 
     align-items: center;
@@ -1394,7 +1273,6 @@ footer {
     text-align: center;
 
     background: var(--dark);
-
     color: white;
 
     border-radius: var(--radius-medium);
@@ -1407,14 +1285,12 @@ footer {
     margin-bottom: 25px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
     padding-left: 4px;
 
     background: white;
-
     color: var(--dark);
 
     border-radius: 50%;
@@ -1433,6 +1309,36 @@ footer {
     color: #aaa;
 
     font-size: 0.8rem;
+}
+
+
+/* Actual YouTube embeds */
+
+.video-embed {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: var(--dark);
+
+    border-radius: var(--radius-medium);
+}
+
+.video-embed iframe {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: 0;
 }
 
 
@@ -1458,12 +1364,12 @@ footer {
     padding: 30px;
 
     display: flex;
-
     flex-direction: column;
 
     background: var(--surface);
 
     border: 1px solid var(--line);
+
     border-radius: var(--radius-medium);
 }
 
@@ -1489,58 +1395,6 @@ footer {
 
 
 /* ========================================
-   EVENTS RESPONSIVE
-======================================== */
-
-@media (max-width: 900px) {
-
-    .event-hero-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .event-overview {
-        max-width: 700px;
-    }
-
-    .event-media {
-        grid-template-columns: 1fr;
-    }
-
-    .growth-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .event-feature-heading {
-        grid-template-columns: 35px 1fr;
-
-        gap: 15px;
-    }
-
-    .event-large-image {
-        height: 360px;
-    }
-
-    .poster-placeholder,
-    .video-placeholder {
-        height: 400px;
-    }
-
-    .event-photo-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .event-photo-grid .image-placeholder {
-        height: 350px;
-    }
-
-}
-
-/* ========================================
    ABOUT HERO
 ======================================== */
 
@@ -1548,6 +1402,7 @@ footer {
     min-height: calc(100vh - 80px);
 
     display: grid;
+
     grid-template-columns: 1.05fr 0.95fr;
 
     gap: 70px;
@@ -1556,9 +1411,9 @@ footer {
 }
 
 .about-hero h1 {
-    margin: 20px 0 30px;
-
     max-width: 780px;
+
+    margin: 20px 0 30px;
 
     font-size: clamp(3.8rem, 7vw, 6.8rem);
 
@@ -1918,10 +1773,87 @@ footer {
 
 
 /* ========================================
-   ABOUT RESPONSIVE
+   RESPONSIVE — TABLET
 ======================================== */
 
 @media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 80px;
+    }
+
+    .hero-image {
+        height: 500px;
+    }
+
+    .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-card {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .project-reverse .project-image,
+    .project-reverse .project-info {
+        order: initial;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-header {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-summary {
+        padding-left: 0;
+
+        border-left: none;
+    }
+
+    .project-details {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .case-section {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-overview {
+        max-width: 700px;
+    }
+
+    .event-media {
+        grid-template-columns: 1fr;
+    }
+
+    .growth-grid {
+        grid-template-columns: 1fr;
+    }
 
     .about-hero {
         grid-template-columns: 1fr;
@@ -1934,7 +1866,7 @@ footer {
     }
 
     .journey-line {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .personal-story-grid,
@@ -1955,7 +1887,128 @@ footer {
 }
 
 
+/* ========================================
+   RESPONSIVE — MOBILE
+======================================== */
+
 @media (max-width: 600px) {
+
+    main {
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 75px 0;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 4.2rem;
+    }
+
+    .hero-image {
+        height: 420px;
+    }
+
+    .hero-info-card {
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+
+        padding: 17px 20px;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        grid-template-columns: 35px 1fr;
+    }
+
+    .section-link {
+        display: none;
+    }
+
+    .project-image {
+        height: 340px;
+    }
+
+    .experience-row {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-arrow {
+        display: none;
+    }
+
+    .contact-section {
+        padding: 70px 25px;
+    }
+
+    .contact-buttons,
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .page-hero {
+        padding-top: 100px;
+    }
+
+    .page-hero h1 {
+        font-size: 3.7rem;
+    }
+
+    .case-hero-image {
+        height: 390px;
+    }
+
+    .project-details {
+        grid-template-columns: 1fr;
+    }
+
+    .case-image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-image-grid .image-placeholder {
+        height: 300px;
+    }
+
+    .wide-case-image {
+        height: 320px;
+    }
+
+    .event-feature-heading {
+        grid-template-columns: 35px 1fr;
+
+        gap: 15px;
+    }
+
+    .event-large-image {
+        height: 360px;
+    }
+
+    .event-photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-photo-grid .image-placeholder {
+        height: 350px;
+    }
 
     .about-hero h1 {
         font-size: 3.7rem;
@@ -1997,104 +2050,4 @@ footer {
         flex-direction: column;
     }
 
-}
-
-/* ========================================
-   YOUTUBE VIDEO EMBEDS
-======================================== */
-
-.video-embed {
-    position: relative;
-
-    width: 100%;
-    aspect-ratio: 16 / 9;
-
-    overflow: hidden;
-
-    background: var(--dark);
-
-    border-radius: var(--radius-medium);
-}
-
-.video-embed iframe {
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    border: 0;
-}
-
-/* ========================================
-   HOMEPAGE HERO PHOTO
-======================================== */
-
-.hero-visual {
-    position: relative;
-}
-
-.hero-image {
-    width: 100%;
-    height: 650px;
-
-    overflow: hidden;
-
-    border-radius: var(--radius-large);
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center top;
-}
-
-
-/* Georgia Tech overlay card */
-
-.hero-info-card {
-    position: absolute;
-
-    left: 28px;
-    right: 28px;
-    bottom: 28px;
-
-    z-index: 20;
-
-    padding: 24px 26px;
-
-    background: rgba(246, 246, 243, 0.96);
-
-    border-radius: var(--radius-medium);
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 5px;
-}
-
-.hero-info-card span {
-    color: var(--muted);
-
-    font-size: 0.8rem;
-}
-
-.hero-info-card strong {
-    color: var(--text);
-
-    font-size: 1rem;
-    font-weight: 650;
-}
-
-.hero-info-card .hero-info-school {
-    margin-bottom: 3px;
-
-    font-size: 0.75rem;
 }
