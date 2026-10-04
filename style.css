@@ -2033,9 +2033,18 @@ footer {
    HOMEPAGE HERO PHOTO
 ======================================== */
 
+.hero-visual {
+    position: relative;
+}
+
 .hero-image {
     position: relative;
+
+    width: 100%;
+    height: 650px;
+
     overflow: hidden;
+
     border-radius: var(--radius-large);
 }
 
@@ -2049,20 +2058,23 @@ footer {
     object-position: center top;
 }
 
-/* Georgia Tech information card */
+
+/* Georgia Tech card */
 
 .hero-tag {
     position: absolute;
 
-    left: 28px;
-    right: 28px;
-    bottom: 28px;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
 
-    z-index: 2;
+    z-index: 10;
 
-    padding: 24px 26px;
+    padding: 22px 24px;
 
     background: rgba(246, 246, 243, 0.94);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
 
     border-radius: var(--radius-medium);
 }
@@ -2072,20 +2084,23 @@ footer {
 
     color: var(--muted);
 
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
 .hero-tag strong {
     display: block;
 
-    margin-bottom: 6px;
+    margin: 0 0 5px;
 
     color: var(--text);
 
     font-size: 1rem;
+    font-weight: 600;
 }
 
 .hero-tag span {
+    display: block;
+
     color: var(--muted);
 
     font-size: 0.8rem;
