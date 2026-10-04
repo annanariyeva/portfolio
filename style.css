@@ -55,6 +55,70 @@ img {
 
 
 /* ========================================
+   UNIVERSAL IMAGE SYSTEM
+======================================== */
+
+/*
+All portfolio image containers have their
+dimensions defined below.
+
+Every photo automatically fills its container.
+No manual image resizing is necessary.
+*/
+
+.hero-image,
+.project-image,
+.event-image,
+.about-image,
+.case-hero-image,
+.case-image-grid .image-placeholder,
+.wide-case-image,
+.work-card-image,
+.event-large-image,
+.event-photo-grid .image-placeholder,
+.poster-placeholder,
+.about-hero-image,
+.story-image-large,
+.story-small-images .image-placeholder,
+.story-engineering-image,
+.future-image {
+    overflow: hidden;
+}
+
+.hero-image img,
+.project-image img,
+.event-image img,
+.about-image img,
+.case-hero-image img,
+.case-image-grid .image-placeholder img,
+.wide-case-image img,
+.work-card-image img,
+.event-large-image img,
+.event-photo-grid .image-placeholder img,
+.poster-placeholder img,
+.about-hero-image img,
+.story-image-large img,
+.story-small-images .image-placeholder img,
+.story-engineering-image img,
+.future-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Portrait gets slightly different crop */
+
+.hero-image img {
+    object-position: center top;
+}
+
+
+/* ========================================
    NAVIGATION
 ======================================== */
 
@@ -64,7 +128,9 @@ img {
     z-index: 100;
 
     background: rgba(246, 246, 243, 0.9);
+
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -106,6 +172,7 @@ img {
 
 .nav-links a {
     color: var(--muted);
+
     font-size: 0.92rem;
 
     transition: 0.2s ease;
@@ -117,10 +184,10 @@ img {
 }
 
 .nav-button {
+    padding: 11px 19px;
+
     background: var(--dark);
     color: white;
-
-    padding: 11px 19px;
 
     border-radius: 100px;
 
@@ -156,11 +223,13 @@ section {
     font-weight: 700;
 
     letter-spacing: 0.16em;
+
     text-transform: uppercase;
 }
 
 .section-heading {
     display: grid;
+
     grid-template-columns: 55px 1fr auto;
 
     gap: 25px;
@@ -182,17 +251,18 @@ section {
     font-size: clamp(2rem, 4vw, 3.4rem);
 
     line-height: 1.08;
+
     letter-spacing: -0.04em;
 }
 
 .section-link {
-    color: var(--muted);
-
-    font-size: 0.9rem;
-
     padding-bottom: 7px;
 
+    color: var(--muted);
+
     border-bottom: 1px solid var(--line);
+
+    font-size: 0.9rem;
 }
 
 .section-link:hover {
@@ -205,11 +275,11 @@ section {
 ======================================== */
 
 .button {
+    min-height: 50px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    min-height: 50px;
 
     padding: 0 24px;
 
@@ -244,6 +314,12 @@ section {
 ======================================== */
 
 .image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
     background:
         linear-gradient(
             135deg,
@@ -252,12 +328,6 @@ section {
         );
 
     border-radius: var(--radius-large);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
 
     color: #8a8a84;
 
@@ -276,6 +346,7 @@ section {
     min-height: calc(100vh - 80px);
 
     display: grid;
+
     grid-template-columns: 1.05fr 0.95fr;
 
     align-items: center;
@@ -289,6 +360,7 @@ section {
     font-size: clamp(4rem, 8vw, 7.6rem);
 
     line-height: 0.85;
+
     letter-spacing: -0.075em;
 
     font-weight: 650;
@@ -300,6 +372,7 @@ section {
     color: var(--muted);
 
     font-size: 1.12rem;
+
     line-height: 1.8;
 }
 
@@ -313,7 +386,7 @@ section {
 
 
 /* ========================================
-   HOMEPAGE HERO PHOTO
+   HERO IMAGE
 ======================================== */
 
 .hero-visual {
@@ -328,25 +401,15 @@ section {
     width: 100%;
     height: 650px;
 
-    overflow: hidden;
+    background: var(--surface);
 
     border-radius: var(--radius-large);
-
-    background: var(--surface);
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center top;
 }
 
 
-/* Georgia Tech information card */
+/* ========================================
+   HERO INFO CARD
+======================================== */
 
 .hero-info-card {
     position: absolute;
@@ -390,6 +453,7 @@ section {
     color: var(--text);
 
     font-size: 0.96rem;
+
     font-weight: 650;
 }
 
@@ -485,12 +549,26 @@ section {
     order: 1;
 }
 
+
+/*
+PRESET PROJECT IMAGE SIZE
+All project photos automatically become this size.
+*/
+
 .project-image {
+    width: 100%;
     height: 470px;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-large);
+
+    background: #e5e5e0;
 }
 
 .project-meta {
     display: flex;
+
     justify-content: space-between;
 
     color: var(--muted);
@@ -507,6 +585,7 @@ section {
     font-size: clamp(2rem, 3vw, 3rem);
 
     line-height: 1.05;
+
     letter-spacing: -0.04em;
 }
 
@@ -617,10 +696,20 @@ section {
     border-radius: var(--radius-medium);
 }
 
+
+/*
+PRESET HOMEPAGE EVENT IMAGE SIZE
+*/
+
 .event-image {
+    width: 100%;
     height: 280px;
 
+    overflow: hidden;
+
     border-radius: 16px;
+
+    background: #e5e5e0;
 }
 
 .event-card > p,
@@ -676,6 +765,7 @@ section {
     font-size: clamp(2.3rem, 4vw, 4rem);
 
     line-height: 1.05;
+
     letter-spacing: -0.05em;
 }
 
@@ -687,8 +777,20 @@ section {
     line-height: 1.8;
 }
 
+
+/*
+PRESET ABOUT PREVIEW IMAGE SIZE
+*/
+
 .about-image {
+    width: 100%;
     height: 520px;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-large);
+
+    background: #e5e5e0;
 }
 
 
@@ -721,6 +823,7 @@ section {
     font-size: clamp(2.5rem, 5vw, 4.8rem);
 
     line-height: 1;
+
     letter-spacing: -0.05em;
 }
 
@@ -734,6 +837,7 @@ section {
 
 .contact-buttons {
     display: flex;
+
     justify-content: center;
 
     gap: 10px;
@@ -743,6 +847,7 @@ section {
 
 .contact-section .button-secondary {
     background: transparent;
+
     color: white;
 
     border-color: #555;
@@ -761,6 +866,7 @@ footer {
     padding: 30px;
 
     display: flex;
+
     justify-content: space-between;
 
     color: var(--muted);
@@ -788,6 +894,7 @@ footer {
     font-size: clamp(4rem, 8vw, 7.5rem);
 
     line-height: 0.92;
+
     letter-spacing: -0.07em;
 
     font-weight: 650;
@@ -799,6 +906,7 @@ footer {
     color: var(--muted);
 
     font-size: 1.1rem;
+
     line-height: 1.8;
 }
 
@@ -829,6 +937,7 @@ footer {
     font-size: clamp(2.8rem, 5vw, 5rem);
 
     line-height: 0.98;
+
     letter-spacing: -0.055em;
 }
 
@@ -852,8 +961,16 @@ footer {
     font-size: 1rem;
 }
 
+
+/*
+PRESET CASE STUDY HERO IMAGE
+*/
+
 .case-hero-image {
+    width: 100%;
     height: 620px;
+
+    border-radius: var(--radius-large);
 }
 
 
@@ -951,6 +1068,7 @@ footer {
     font-size: clamp(2rem, 4vw, 3.6rem);
 
     line-height: 1.05;
+
     letter-spacing: -0.045em;
 }
 
@@ -962,6 +1080,7 @@ footer {
     color: var(--muted);
 
     font-size: 1rem;
+
     line-height: 1.8;
 }
 
@@ -983,6 +1102,8 @@ footer {
     height: 470px;
 
     margin-top: 40px;
+
+    border-radius: var(--radius-large);
 }
 
 
@@ -1084,6 +1205,7 @@ footer {
     font-size: clamp(2.5rem, 6vw, 5.5rem);
 
     line-height: 1;
+
     letter-spacing: -0.05em;
 
     transition: opacity 0.2s ease;
@@ -1128,6 +1250,7 @@ footer {
     font-size: clamp(2.7rem, 5vw, 5rem);
 
     line-height: 1;
+
     letter-spacing: -0.055em;
 }
 
@@ -1148,6 +1271,8 @@ footer {
 
 .event-large-image {
     height: 540px;
+
+    border-radius: var(--radius-large);
 }
 
 .event-overview {
@@ -1311,9 +1436,6 @@ footer {
     font-size: 0.8rem;
 }
 
-
-/* Actual YouTube embeds */
-
 .video-embed {
     position: relative;
 
@@ -1390,6 +1512,7 @@ footer {
     color: var(--muted);
 
     font-size: 0.9rem;
+
     line-height: 1.7;
 }
 
@@ -1418,6 +1541,7 @@ footer {
     font-size: clamp(3.8rem, 7vw, 6.8rem);
 
     line-height: 0.93;
+
     letter-spacing: -0.065em;
 
     font-weight: 650;
@@ -1429,11 +1553,14 @@ footer {
     color: var(--muted);
 
     font-size: 1.1rem;
+
     line-height: 1.8;
 }
 
 .about-hero-image {
     height: 620px;
+
+    border-radius: var(--radius-large);
 }
 
 
@@ -1463,6 +1590,7 @@ footer {
     font-size: clamp(2.7rem, 5vw, 5rem);
 
     line-height: 1;
+
     letter-spacing: -0.055em;
 }
 
@@ -1474,6 +1602,7 @@ footer {
     color: var(--muted);
 
     font-size: 1.05rem;
+
     line-height: 1.85;
 }
 
@@ -1545,6 +1674,7 @@ footer {
     color: var(--muted);
 
     font-size: 0.78rem;
+
     line-height: 1.5;
 }
 
@@ -1583,6 +1713,7 @@ footer {
     font-size: clamp(2.7rem, 5vw, 5rem);
 
     line-height: 1;
+
     letter-spacing: -0.055em;
 }
 
@@ -1625,11 +1756,14 @@ footer {
     margin-top: 10px;
 
     font-size: 0.9rem;
+
     line-height: 1.6;
 }
 
 .story-image-large {
     height: 500px;
+
+    border-radius: var(--radius-large);
 }
 
 .story-small-images {
@@ -1665,6 +1799,8 @@ footer {
 
 .story-engineering-image {
     height: 590px;
+
+    border-radius: var(--radius-large);
 }
 
 
@@ -1722,6 +1858,7 @@ footer {
     color: var(--muted);
 
     font-size: 0.9rem;
+
     line-height: 1.6;
 }
 
@@ -1748,6 +1885,7 @@ footer {
     font-size: clamp(2.8rem, 5vw, 5rem);
 
     line-height: 1;
+
     letter-spacing: -0.055em;
 }
 
@@ -1769,6 +1907,8 @@ footer {
 
 .future-image {
     height: 620px;
+
+    border-radius: var(--radius-large);
 }
 
 
@@ -2050,29 +2190,4 @@ footer {
         flex-direction: column;
     }
 
-}
-
-/* ========================================
-   PROJECT PHOTOS
-======================================== */
-
-.project-photo {
-    overflow: hidden;
-    border-radius: var(--radius-large);
-}
-
-.project-photo img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center;
-
-    transition: transform 0.3s ease;
-}
-
-.project-photo:hover img {
-    transform: scale(1.02);
 }
