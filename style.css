@@ -2033,19 +2033,18 @@ footer {
    HOMEPAGE HERO PHOTO
 ======================================== */
 
-
-
 .hero-image {
-    height: 600px; 
+    height: 550px;
     overflow: hidden;
     border-radius: var(--radius-large);
 }
 
 .hero-image img {
     width: 100%;
-    height: 600px;
+    height: 100%;
+
     display: block;
 
     object-fit: cover;
-    object-position: center 5%;
+    object-position: center top;
 }
