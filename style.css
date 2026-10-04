@@ -1603,7 +1603,7 @@ footer {
 .journey-line {
     display: grid;
 
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     border-top: 1px solid var(--line);
 }
