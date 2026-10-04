@@ -2051,3 +2051,28 @@ footer {
     }
 
 }
+
+/* ========================================
+   PROJECT PHOTOS
+======================================== */
+
+.project-photo {
+    overflow: hidden;
+    border-radius: var(--radius-large);
+}
+
+.project-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.3s ease;
+}
+
+.project-photo:hover img {
+    transform: scale(1.02);
+}
