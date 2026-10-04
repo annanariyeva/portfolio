@@ -2030,3 +2030,23 @@ footer {
 
     border: 0;
 }
+
+/* ========================================
+   HOMEPAGE HERO PHOTO
+======================================== */
+
+.hero-image {
+    overflow: hidden;
+
+    border-radius: var(--radius-large);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
