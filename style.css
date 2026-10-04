@@ -1508,3 +1508,462 @@ footer {
     }
 
 }
+
+/* ========================================
+   ABOUT HERO
+======================================== */
+
+.about-hero {
+    min-height: calc(100vh - 80px);
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-hero h1 {
+    margin: 20px 0 30px;
+
+    max-width: 780px;
+
+    font-size: clamp(3.8rem, 7vw, 6.8rem);
+
+    line-height: 0.93;
+    letter-spacing: -0.065em;
+
+    font-weight: 650;
+}
+
+.about-lead {
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-hero-image {
+    height: 620px;
+}
+
+
+/* ========================================
+   STORY INTRO
+======================================== */
+
+.story-intro {
+    display: grid;
+
+    grid-template-columns: 0.4fr 1.6fr;
+
+    gap: 70px;
+
+    border-top: 1px solid var(--line);
+}
+
+.story-intro-content {
+    max-width: 850px;
+}
+
+.story-intro-content h2 {
+    max-width: 800px;
+
+    margin-bottom: 35px;
+
+    font-size: clamp(2.7rem, 5vw, 5rem);
+
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.story-intro-content p {
+    max-width: 700px;
+
+    margin-bottom: 20px;
+
+    color: var(--muted);
+
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+
+/* ========================================
+   JOURNEY
+======================================== */
+
+.journey-section {
+    border-top: 1px solid var(--line);
+}
+
+.journey-line {
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    border-top: 1px solid var(--line);
+}
+
+.journey-stop {
+    position: relative;
+
+    min-height: 220px;
+
+    padding: 25px 20px;
+
+    border-right: 1px solid var(--line);
+}
+
+.journey-stop:first-child {
+    border-left: 1px solid var(--line);
+}
+
+.journey-stop::before {
+    content: "";
+
+    position: absolute;
+
+    top: -6px;
+    left: 20px;
+
+    width: 11px;
+    height: 11px;
+
+    background: var(--dark);
+
+    border-radius: 50%;
+}
+
+.journey-stop > span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 0.65rem;
+}
+
+.journey-stop strong {
+    display: block;
+
+    margin-top: 65px;
+    margin-bottom: 8px;
+
+    font-size: 1.05rem;
+}
+
+.journey-stop p {
+    color: var(--muted);
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   PERSONAL STORIES
+======================================== */
+
+.personal-story {
+    border-top: 1px solid var(--line);
+}
+
+.personal-story-heading {
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 60px;
+}
+
+.story-number {
+    padding-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 0.75rem;
+}
+
+.personal-story-heading h2 {
+    max-width: 850px;
+
+    margin-top: 10px;
+
+    font-size: clamp(2.7rem, 5vw, 5rem);
+
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.personal-story-grid {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.story-copy > p {
+    margin-bottom: 20px;
+
+    color: var(--muted);
+
+    line-height: 1.85;
+}
+
+.story-takeaway {
+    margin-top: 40px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid var(--line);
+}
+
+.story-takeaway span {
+    color: var(--muted);
+
+    font-size: 0.65rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.story-takeaway p {
+    margin-top: 10px;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.story-image-large {
+    height: 500px;
+}
+
+.story-small-images {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+.story-small-images .image-placeholder {
+    height: 240px;
+
+    border-radius: var(--radius-medium);
+}
+
+
+/* ========================================
+   ENGINEERING STORY
+======================================== */
+
+.engineering-story {
+    grid-template-columns: 0.85fr 1.15fr;
+
+    align-items: center;
+}
+
+.story-copy .button {
+    margin-top: 15px;
+}
+
+.story-engineering-image {
+    height: 590px;
+}
+
+
+/* ========================================
+   PERSPECTIVE
+======================================== */
+
+.perspective-section {
+    border-top: 1px solid var(--line);
+}
+
+.perspective-grid {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+}
+
+.perspective-main {
+    font-size: 1.15rem;
+}
+
+.perspective-main p {
+    margin-bottom: 22px;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+.perspective-points > div {
+    display: grid;
+
+    grid-template-columns: 50px 180px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid var(--line);
+}
+
+.perspective-points span {
+    color: var(--muted);
+
+    font-size: 0.7rem;
+}
+
+.perspective-points h3 {
+    font-size: 1.1rem;
+}
+
+.perspective-points p {
+    color: var(--muted);
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   FUTURE
+======================================== */
+
+.future-section {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    border-top: 1px solid var(--line);
+}
+
+.future-content h2 {
+    margin: 15px 0 30px;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.future-content > p {
+    margin-bottom: 18px;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+.future-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 35px;
+}
+
+.future-image {
+    height: 620px;
+}
+
+
+/* ========================================
+   ABOUT RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .about-hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 90px;
+    }
+
+    .story-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-line {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .personal-story-grid,
+    .engineering-story {
+        grid-template-columns: 1fr;
+    }
+
+    .perspective-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .future-section {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-hero h1 {
+        font-size: 3.7rem;
+    }
+
+    .about-hero-image {
+        height: 430px;
+    }
+
+    .journey-line {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .personal-story-heading {
+        grid-template-columns: 35px 1fr;
+
+        gap: 15px;
+    }
+
+    .story-image-large,
+    .story-engineering-image,
+    .future-image {
+        height: 380px;
+    }
+
+    .story-small-images {
+        grid-template-columns: 1fr;
+    }
+
+    .perspective-points > div {
+        grid-template-columns: 35px 1fr;
+    }
+
+    .perspective-points p {
+        grid-column: 2;
+    }
+
+    .future-buttons {
+        flex-direction: column;
+    }
+
+}
