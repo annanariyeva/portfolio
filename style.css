@@ -50,71 +50,7 @@ a {
 
 img {
     display: block;
-    width: 100%;
-}
-
-
-/* ========================================
-   UNIVERSAL IMAGE SYSTEM
-======================================== */
-
-/*
-All portfolio image containers have their
-dimensions defined below.
-
-Every photo automatically fills its container.
-No manual image resizing is necessary.
-*/
-
-.hero-image,
-.project-image,
-.event-image,
-.about-image,
-.case-hero-image,
-.case-image-grid .image-placeholder,
-.wide-case-image,
-.work-card-image,
-.event-large-image,
-.event-photo-grid .image-placeholder,
-.poster-placeholder,
-.about-hero-image,
-.story-image-large,
-.story-small-images .image-placeholder,
-.story-engineering-image,
-.future-image {
-    overflow: hidden;
-}
-
-.hero-image img,
-.project-image img,
-.event-image img,
-.about-image img,
-.case-hero-image img,
-.case-image-grid .image-placeholder img,
-.wide-case-image img,
-.work-card-image img,
-.event-large-image img,
-.event-photo-grid .image-placeholder img,
-.poster-placeholder img,
-.about-hero-image img,
-.story-image-large img,
-.story-small-images .image-placeholder img,
-.story-engineering-image img,
-.future-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center;
-}
-
-
-/* Portrait gets slightly different crop */
-
-.hero-image img {
-    object-position: center top;
+    max-width: 100%;
 }
 
 
@@ -223,7 +159,6 @@ section {
     font-weight: 700;
 
     letter-spacing: 0.16em;
-
     text-transform: uppercase;
 }
 
@@ -310,7 +245,7 @@ section {
 
 
 /* ========================================
-   IMAGE PLACEHOLDERS
+   PLACEHOLDER STYLE
 ======================================== */
 
 .image-placeholder {
@@ -335,6 +270,58 @@ section {
     font-weight: 700;
 
     letter-spacing: 0.12em;
+}
+
+
+/* ========================================
+   AUTOMATIC IMAGE BEHAVIOR
+======================================== */
+
+/*
+   IMPORTANT:
+
+   All image CONTAINERS have predetermined
+   dimensions elsewhere in this file.
+
+   Images NEVER control the size of the layout.
+
+   Every uploaded image automatically fills
+   its assigned container and is cropped when
+   necessary.
+
+   No manual image resizing is required.
+*/
+
+.hero-image img,
+.project-image img,
+.event-image img,
+.about-image img,
+.case-hero-image img,
+.case-image-grid .image-placeholder img,
+.wide-case-image img,
+.work-card-image img,
+.event-large-image img,
+.event-photo-grid .image-placeholder img,
+.about-hero-image img,
+.story-image-large img,
+.story-small-images .image-placeholder img,
+.story-engineering-image img,
+.future-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Portrait is anchored toward the top */
+
+.hero-image img {
+    object-position: center top;
 }
 
 
@@ -386,7 +373,8 @@ section {
 
 
 /* ========================================
-   HERO IMAGE
+   HOMEPAGE HERO IMAGE
+   PRESET SIZE
 ======================================== */
 
 .hero-visual {
@@ -401,6 +389,8 @@ section {
     width: 100%;
     height: 650px;
 
+    overflow: hidden;
+
     background: var(--surface);
 
     border-radius: var(--radius-large);
@@ -408,7 +398,7 @@ section {
 
 
 /* ========================================
-   HERO INFO CARD
+   HERO INFORMATION CARD
 ======================================== */
 
 .hero-info-card {
@@ -520,7 +510,7 @@ section {
 
 
 /* ========================================
-   PROJECTS
+   HOMEPAGE PROJECTS
 ======================================== */
 
 .work-section {
@@ -551,8 +541,7 @@ section {
 
 
 /*
-PRESET PROJECT IMAGE SIZE
-All project photos automatically become this size.
+   PRESET PROJECT IMAGE SIZE
 */
 
 .project-image {
@@ -561,9 +550,9 @@ All project photos automatically become this size.
 
     overflow: hidden;
 
-    border-radius: var(--radius-large);
-
     background: #e5e5e0;
+
+    border-radius: var(--radius-large);
 }
 
 .project-meta {
@@ -698,7 +687,7 @@ All project photos automatically become this size.
 
 
 /*
-PRESET HOMEPAGE EVENT IMAGE SIZE
+   PRESET HOMEPAGE EVENT IMAGE SIZE
 */
 
 .event-image {
@@ -707,9 +696,9 @@ PRESET HOMEPAGE EVENT IMAGE SIZE
 
     overflow: hidden;
 
-    border-radius: 16px;
-
     background: #e5e5e0;
+
+    border-radius: 16px;
 }
 
 .event-card > p,
@@ -744,7 +733,7 @@ PRESET HOMEPAGE EVENT IMAGE SIZE
 
 
 /* ========================================
-   ABOUT PREVIEW
+   HOMEPAGE ABOUT PREVIEW
 ======================================== */
 
 .about-preview {
@@ -779,7 +768,7 @@ PRESET HOMEPAGE EVENT IMAGE SIZE
 
 
 /*
-PRESET ABOUT PREVIEW IMAGE SIZE
+   PRESET ABOUT PREVIEW IMAGE SIZE
 */
 
 .about-image {
@@ -788,9 +777,9 @@ PRESET ABOUT PREVIEW IMAGE SIZE
 
     overflow: hidden;
 
-    border-radius: var(--radius-large);
-
     background: #e5e5e0;
+
+    border-radius: var(--radius-large);
 }
 
 
@@ -912,7 +901,7 @@ footer {
 
 
 /* ========================================
-   CASE STUDY
+   WORK PAGE — CASE STUDY
 ======================================== */
 
 .case-study {
@@ -963,12 +952,14 @@ footer {
 
 
 /*
-PRESET CASE STUDY HERO IMAGE
+   PRESET CASE STUDY HERO IMAGE
 */
 
 .case-hero-image {
     width: 100%;
     height: 620px;
+
+    overflow: hidden;
 
     border-radius: var(--radius-large);
 }
@@ -1084,6 +1075,11 @@ PRESET CASE STUDY HERO IMAGE
     line-height: 1.8;
 }
 
+
+/*
+   PRESET TWO-IMAGE CASE STUDY GRID
+*/
+
 .case-image-grid {
     display: grid;
 
@@ -1095,13 +1091,26 @@ PRESET CASE STUDY HERO IMAGE
 }
 
 .case-image-grid .image-placeholder {
+    width: 100%;
     height: 390px;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-large);
 }
 
+
+/*
+   PRESET WIDE CASE STUDY IMAGE
+*/
+
 .wide-case-image {
+    width: 100%;
     height: 470px;
 
     margin-top: 40px;
+
+    overflow: hidden;
 
     border-radius: var(--radius-large);
 }
@@ -1161,8 +1170,16 @@ PRESET CASE STUDY HERO IMAGE
     border-radius: var(--radius-medium);
 }
 
+
+/*
+   PRESET OTHER-WORK IMAGE
+*/
+
 .work-card-image {
+    width: 100%;
     height: 390px;
+
+    overflow: hidden;
 
     border-radius: 0;
 }
@@ -1269,8 +1286,16 @@ PRESET CASE STUDY HERO IMAGE
     align-items: center;
 }
 
+
+/*
+   PRESET LARGE EVENT IMAGE
+*/
+
 .event-large-image {
+    width: 100%;
     height: 540px;
+
+    overflow: hidden;
 
     border-radius: var(--radius-large);
 }
@@ -1327,6 +1352,12 @@ PRESET CASE STUDY HERO IMAGE
     align-items: start;
 }
 
+
+/*
+   POSTER SIZE
+   5:4 to match 40 × 32 poster format
+*/
+
 .poster-placeholder {
     width: 100%;
 
@@ -1357,6 +1388,7 @@ PRESET CASE STUDY HERO IMAGE
     aspect-ratio: 5 / 4;
 
     object-fit: cover;
+    object-position: center;
 
     border-radius: var(--radius-medium);
 
@@ -1375,8 +1407,16 @@ PRESET CASE STUDY HERO IMAGE
     gap: 15px;
 }
 
+
+/*
+   PRESET EVENT PHOTO SIZE
+*/
+
 .event-photo-grid .image-placeholder {
+    width: 100%;
     height: 520px;
+
+    overflow: hidden;
 
     border-radius: var(--radius-medium);
 }
@@ -1518,7 +1558,7 @@ PRESET CASE STUDY HERO IMAGE
 
 
 /* ========================================
-   ABOUT HERO
+   ABOUT PAGE HERO
 ======================================== */
 
 .about-hero {
@@ -1557,8 +1597,16 @@ PRESET CASE STUDY HERO IMAGE
     line-height: 1.8;
 }
 
+
+/*
+   PRESET ABOUT HERO IMAGE
+*/
+
 .about-hero-image {
+    width: 100%;
     height: 620px;
+
+    overflow: hidden;
 
     border-radius: var(--radius-large);
 }
@@ -1760,8 +1808,16 @@ PRESET CASE STUDY HERO IMAGE
     line-height: 1.6;
 }
 
+
+/*
+   PRESET STORY MAIN IMAGE
+*/
+
 .story-image-large {
+    width: 100%;
     height: 500px;
+
+    overflow: hidden;
 
     border-radius: var(--radius-large);
 }
@@ -1776,8 +1832,16 @@ PRESET CASE STUDY HERO IMAGE
     margin-top: 15px;
 }
 
+
+/*
+   PRESET STORY SMALL IMAGES
+*/
+
 .story-small-images .image-placeholder {
+    width: 100%;
     height: 240px;
+
+    overflow: hidden;
 
     border-radius: var(--radius-medium);
 }
@@ -1797,8 +1861,16 @@ PRESET CASE STUDY HERO IMAGE
     margin-top: 15px;
 }
 
+
+/*
+   PRESET ENGINEERING STORY IMAGE
+*/
+
 .story-engineering-image {
+    width: 100%;
     height: 590px;
+
+    overflow: hidden;
 
     border-radius: var(--radius-large);
 }
@@ -1905,8 +1977,16 @@ PRESET CASE STUDY HERO IMAGE
     margin-top: 35px;
 }
 
+
+/*
+   PRESET FUTURE IMAGE
+*/
+
 .future-image {
+    width: 100%;
     height: 620px;
+
+    overflow: hidden;
 
     border-radius: var(--radius-large);
 }
@@ -2053,6 +2133,11 @@ PRESET CASE STUDY HERO IMAGE
         font-size: 4.2rem;
     }
 
+
+    /*
+       MOBILE HERO IMAGE SIZE
+    */
+
     .hero-image {
         height: 420px;
     }
@@ -2076,6 +2161,11 @@ PRESET CASE STUDY HERO IMAGE
     .section-link {
         display: none;
     }
+
+
+    /*
+       MOBILE PROJECT IMAGE SIZE
+    */
 
     .project-image {
         height: 340px;
@@ -2112,6 +2202,11 @@ PRESET CASE STUDY HERO IMAGE
         font-size: 3.7rem;
     }
 
+
+    /*
+       MOBILE CASE STUDY IMAGE SIZE
+    */
+
     .case-hero-image {
         height: 390px;
     }
@@ -2138,6 +2233,11 @@ PRESET CASE STUDY HERO IMAGE
         gap: 15px;
     }
 
+
+    /*
+       MOBILE EVENT IMAGE SIZE
+    */
+
     .event-large-image {
         height: 360px;
     }
@@ -2154,6 +2254,11 @@ PRESET CASE STUDY HERO IMAGE
         font-size: 3.7rem;
     }
 
+
+    /*
+       MOBILE ABOUT HERO IMAGE
+    */
+
     .about-hero-image {
         height: 430px;
     }
@@ -2167,6 +2272,11 @@ PRESET CASE STUDY HERO IMAGE
 
         gap: 15px;
     }
+
+
+    /*
+       MOBILE STORY IMAGES
+    */
 
     .story-image-large,
     .story-engineering-image,
