@@ -2034,6 +2034,7 @@ footer {
 ======================================== */
 
 .hero-image {
+    position: relative;
     overflow: hidden;
     border-radius: var(--radius-large);
 }
@@ -2045,5 +2046,47 @@ footer {
     display: block;
 
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center top;
+}
+
+/* Georgia Tech information card */
+
+.hero-tag {
+    position: absolute;
+
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+
+    z-index: 2;
+
+    padding: 24px 26px;
+
+    background: rgba(246, 246, 243, 0.94);
+
+    border-radius: var(--radius-medium);
+}
+
+.hero-tag p {
+    margin: 0 0 8px;
+
+    color: var(--muted);
+
+    font-size: 0.8rem;
+}
+
+.hero-tag strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--text);
+
+    font-size: 1rem;
+}
+
+.hero-tag span {
+    color: var(--muted);
+
+    font-size: 0.8rem;
 }
