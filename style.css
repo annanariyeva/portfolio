@@ -311,8 +311,6 @@ section {
     position: relative;
 }
 
-.hero-image {
-    height: 590px;
 }
 
 .hero-tag {
@@ -2052,7 +2050,7 @@ footer {
 }
 
 .hero-image {
-    height: 550px;
+    height: 650px;
     overflow: hidden;
     border-radius: var(--radius-large);
 }
