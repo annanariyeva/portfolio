@@ -2246,6 +2246,10 @@ footer {
         height: 320px;
     }
 
+   .about-hero-image img {
+        transform: scale(0.9);
+    }
+
     .journey-line {
         grid-template-columns: 1fr 1fr;
     }
