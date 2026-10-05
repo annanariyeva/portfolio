@@ -2248,6 +2248,19 @@ footer {
     /*
        MOBILE ABOUT HERO IMAGE
     */
+   .about-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.15 / 1;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
 
     .about-hero-image {
         height: 450px;
