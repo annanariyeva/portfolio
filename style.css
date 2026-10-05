@@ -2157,12 +2157,15 @@ footer {
     }
 
     .hero-info-card {
-        left: 18px;
-        right: 18px;
-        bottom: 18px;
+    left: 18px;
+    right: auto;
+    bottom: 18px;
 
-        padding: 17px 20px;
-    }
+    width: auto;
+    max-width: 300px;
+
+    padding: 14px 18px;
+   }
 
     .focus-grid {
         grid-template-columns: 1fr;
