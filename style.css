@@ -293,15 +293,15 @@ section {
 */
 
 .hero-image img {
-       width: 100%;
-       height: 100%;
-   
-       display: block;
-   
-       object-fit: contain;
-       object-position: center bottom;
-   
-       background: transparent;
+    width: 100%;
+    height: 650px;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center top;
+
+    background: transparent;
 }
 .project-image img,
 .event-image img,
@@ -373,6 +373,30 @@ section {
     line-height: 1.8;
 }
 
+.hero-credentials {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+    color: var(--muted);
+
+    font-size: 0.78rem;
+}
+
+.hero-credentials strong {
+    color: var(--text);
+
+    font-weight: 650;
+}
+
+.credential-dot {
+    color: var(--accent);
+}
+
 .hero-buttons {
     display: flex;
 
@@ -397,68 +421,13 @@ section {
     position: relative;
 
     width: 100%;
-    height: 650px;
+    height: 570px;
 
-    overflow: visible;
+    overflow: hidden;
 
     background: transparent;
 
     border-radius: 0;
-}
-
-
-/* ========================================
-   HERO INFORMATION CARD
-======================================== */
-
-.hero-info-card {
-    position: absolute;
-
-    left: 36px;
-    bottom: 32px;
-
-    width: auto;
-    max-width: 330px;
-
-    z-index: 10;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 2px;
-
-    padding: 14px 18px;
-
-    background: rgba(246, 246, 243, 0.82);
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(0, 0, 0, 0.05);
-
-    border-radius: 14px;
-
-    box-shadow: none;
-}
-
-.hero-info-card span {
-    display: block;
-
-    color: var(--muted);
-
-    font-size: 0.7rem;
-}
-
-.hero-info-card strong {
-    display: block;
-
-    margin: 2px 0;
-
-    color: var(--text);
-
-    font-size: 0.9rem;
-
-    font-weight: 650;
 }
 
 
@@ -2156,16 +2125,6 @@ footer {
         height: 420px;
     }
 
-    .hero-info-card {
-    left: 18px;
-    right: auto;
-    bottom: 18px;
-
-    width: auto;
-    max-width: 300px;
-
-    padding: 14px 18px;
-   }
 
     .focus-grid {
         grid-template-columns: 1fr;
