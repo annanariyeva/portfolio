@@ -292,7 +292,17 @@ section {
    No manual image resizing is required.
 */
 
-.hero-image img,
+.hero-image img {
+       width: 100%;
+       height: 100%;
+   
+       display: block;
+   
+       object-fit: contain;
+       object-position: center bottom;
+   
+       background: transparent;
+}
 .project-image img,
 .event-image img,
 .about-image img,
