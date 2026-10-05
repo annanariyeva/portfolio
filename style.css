@@ -2191,8 +2191,15 @@ footer {
     */
 
     .case-hero-image {
-        height: 300px;
-    }
+       height: auto;
+       aspect-ratio: 1240 / 620;
+   }
+
+   .case-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
 
     .project-details {
         grid-template-columns: 1fr;
